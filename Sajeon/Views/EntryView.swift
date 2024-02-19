@@ -71,6 +71,6 @@ struct EntryView: View {
 }
 
 #Preview {
-    EntryView(entry: example)
+    EntryView(entry: Entry.exampleEntry)
         .environmentObject(ViewModel())
 }

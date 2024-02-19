@@ -45,6 +45,27 @@ struct Entry: Codable, Identifiable, Hashable {
             case confer = "cf"
             case derivedTerms = "ders"
         }
+    
+    static let exampleEntry = Entry(word: "병원",
+                                    romaja: "byeong-won",
+                                    partOfSpeech: Pos(rawValue: "n")!,
+                                    definitions: [Definition(definition: "a hospital",
+                                                             examples: [
+                                                                Example(example: "당신은 돈복이 많군요.", transliteration: "Dangsineun donbogi mankunyo.", translation: "you are blessed with money and fortune."),
+                                                                Example(example: "나는 인복이 많다.")]
+                                                            ),
+                                                  Definition(definition: "fortune, blessing, luck", examples: [])],
+                                    conjugation: ["복무한다", "복무해", "복무해요", "복무합니다"],
+                                    notes: nil,
+                                    confer: ["굉장히", "매우"],
+                                    tags: [Tag(rawValue: "ik-b1")!, Tag(rawValue: "topik1")!],
+                                    hanja: "眼鏡",
+                                    synonyms: ["넷"],
+                                    relatedWords: ["친"],
+                                    antonyms: ["병"],
+                                    derivedTerms: ["거","게","걸","건"])
+
+
 }
 
 // MARK: - Def
@@ -122,31 +143,3 @@ enum Tag: String, Codable {
     case ikB1 = "ik-b1"
     case topik1 = "topik1"
 }
-
-
-
-
-#if DEBUG
-
-let example = Entry(word: "병원",
-                    romaja: "byeong-won",
-                    partOfSpeech: Pos(rawValue: "n")!,
-                    definitions: [Definition(definition: "a hospital",
-                                             examples: [
-                                                Example(example: "당신은 돈복이 많군요.", transliteration: "Dangsineun donbogi mankunyo.", translation: "you are blessed with money and fortune."),
-                                                Example(example: "나는 인복이 많다.")]
-                                            ),
-                                  Definition(definition: "fortune, blessing, luck", examples: [])],
-                    conjugation: ["복무한다", "복무해", "복무해요", "복무합니다"],
-                    notes: nil,
-                    confer: ["굉장히", "매우"],
-                    tags: [Tag(rawValue: "ik-b1")!, Tag(rawValue: "topik1")!],
-                    hanja: "眼鏡",
-                    synonyms: ["넷"],
-                    relatedWords: ["친"],
-                    antonyms: ["병"],
-                    derivedTerms: ["거","게","걸","건"])
-
-
-
-#endif

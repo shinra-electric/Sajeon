@@ -43,6 +43,6 @@ struct EntryRow: View {
 }
 
 #Preview {
-    EntryRow(entry: example)
+    EntryRow(entry: Entry.exampleEntry)
         .environmentObject(ViewModel())
 }
