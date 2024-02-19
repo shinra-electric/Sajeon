@@ -30,9 +30,7 @@ struct FeaturesView: View {
     }
 }
 
-struct FeaturesView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeaturesView()
-            .environmentObject(ViewModel())
-    }
+#Preview {
+    FeaturesView()
+        .environmentObject(ViewModel())
 }

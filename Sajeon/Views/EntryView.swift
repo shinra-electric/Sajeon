@@ -33,9 +33,7 @@ struct EntryView: View {
                         }
                     }
                 }
-                
-                
-                
+
                 if let definitions = entry.definitions {
                     Section(header: Text("Meaning")) {
                         ForEach(definitions, id: \.self) { def in
@@ -70,13 +68,9 @@ struct EntryView: View {
         .scrollContentBackground(.hidden)
         .background(Color("naverblue"), ignoresSafeAreaEdges: .top)
     }
-       
 }
 
-
-struct EntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        EntryView(entry: example)
-            .environmentObject(ViewModel())
-    }
+#Preview {
+    EntryView(entry: example)
+        .environmentObject(ViewModel())
 }

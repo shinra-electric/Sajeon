@@ -36,8 +36,6 @@ struct GradientButtonStyle: ButtonStyle {
     }
 }
 
-struct FeatureButton_Previews: PreviewProvider {
-    static var previews: some View {
-        FeatureButton(icon: "bookmark.fill", title: "Bookmark")
-    }
+#Preview {
+    FeatureButton(icon: "bookmark.fill", title: "Bookmark")
 }

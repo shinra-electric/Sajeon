@@ -13,12 +13,11 @@ struct FavouritesView: View {
     
     var body: some View {
         NavigationStack {
-            
             ZStack {
                 Color("naverblue")
-                
+                    .ignoresSafeArea(.container, edges: .top)
+
                 VStack(alignment: .leading, spacing: 0) {
-                    
                     BannerView()
                     
                     Text("Favourites")
@@ -27,7 +26,6 @@ struct FavouritesView: View {
                         .padding(.horizontal, 30)
                     
                     if viewModel.favourites.isEmpty {
-                        
                         VStack {
                             Spacer()
                             HStack {
@@ -41,7 +39,6 @@ struct FavouritesView: View {
                             }
                             Spacer()
                         }
-
                     } else {
                         List {
                             ForEach(viewModel.dictionary.filter { viewModel.favourites.contains($0) }, id: \.id) { item in
@@ -70,20 +67,15 @@ struct FavouritesView: View {
                     Spacer()
                 }
                 .padding(.top)
-                
-                
             }
             .navigationTitle("Favourites")
             .navigationBarHidden(true)
-            
         }
         .accentColor(.white)
     }
 }
 
-struct FavouritesView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavouritesView()
-            .environmentObject(ViewModel())
-    }
+#Preview {
+    FavouritesView()
+        .environmentObject(ViewModel())
 }

@@ -42,11 +42,7 @@ struct EntryRow: View {
     
 }
 
-
-
-struct EntryRow_Previews: PreviewProvider {
-    static var previews: some View {
-        EntryRow(entry: example)
-            .environmentObject(ViewModel())
-    }
+#Preview {
+    EntryRow(entry: example)
+        .environmentObject(ViewModel())
 }

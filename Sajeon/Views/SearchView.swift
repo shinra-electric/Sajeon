@@ -13,7 +13,6 @@ struct SearchView: View {
     
     @State private var searchTerm: String = ""
     
-    
     init() {
         //Use this if NavigationBarTitle is with Large Font
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -24,7 +23,6 @@ struct SearchView: View {
     
     var body: some View {
         NavigationStack {
-            
             ZStack {
                 Color("naverblue")
                     .ignoresSafeArea(.container, edges: .top)
@@ -52,21 +50,13 @@ struct SearchView: View {
             .navigationBarHidden(true)
         }
         .accentColor(.white)
-
-        
     }
 }
 
-
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-            .environmentObject(ViewModel())
-    }
+#Preview {
+    SearchView()
+        .environmentObject(ViewModel())
 }
-
-
 
 struct RecentsView: View {
     @EnvironmentObject var viewModel: ViewModel
@@ -146,8 +136,5 @@ struct DictionarySearchView: View {
                 }
             }
         }
-        
-        
-        
     }
 }
