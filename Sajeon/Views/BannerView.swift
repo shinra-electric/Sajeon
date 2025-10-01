@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BannerView: View {
-    @State private var isShowingFeatureSheet: Bool = false
+//    @State private var isShowingFeatureSheet: Bool = false
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
@@ -29,16 +29,16 @@ struct BannerView: View {
             Spacer()
             
             VStack(alignment: .trailing, spacing: 0) {
-                Button {
-                    isShowingFeatureSheet.toggle()
-                } label: {
-                    Image(systemName: "ellipsis.circle.fill")
-                }
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .foregroundColor(Color.white)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .offset(x: -4, y: -8)
+//                Button {
+//                    isShowingFeatureSheet.toggle()
+//                } label: {
+//                    Image(systemName: "ellipsis.circle.fill")
+//                }
+//                .frame(maxWidth: .infinity, alignment: .trailing)
+//                .foregroundColor(Color.white)
+//                .font(.largeTitle)
+//                .fontWeight(.bold)
+//                .offset(x: -4, y: -8)
                 
                 Image("dictpic")
                     .resizable()
@@ -51,11 +51,10 @@ struct BannerView: View {
         .padding(.horizontal, 30)
         .padding(.bottom)
         .frame(height: 160)
-        .sheet(isPresented: $isShowingFeatureSheet) {
-            FeaturesView()
-                .presentationDetents([.medium])
-            
-        }
+//        .sheet(isPresented: $isShowingFeatureSheet) {
+//            FeaturesView()
+//                .presentationDetents([.medium])
+//        }
     }
 }
 
