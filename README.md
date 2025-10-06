@@ -6,7 +6,7 @@ Korean Dictionary for iOS
 > [!NOTE]
 > This dictionary currently only works for Korean -> English. 
 
-This app was originally a small project out of frustration for the lack of good free Korean-English dictionaries on the App Store. 
+This app was originally a small project borne out of frustration for the lack of good free Korean-English dictionaries on the App Store. 
 
 During my time in the Apple Developer Academy, I was tasked with taking an existing app or website and redesigning it. I decided to take on this challenge and redesigned an existing app that I thought was poorly designed. 
 
