@@ -8,7 +8,7 @@ Korean Dictionary for iOS
 
 This app was originally a small project borne out of frustration for the lack of good free Korean-English dictionaries on the App Store. 
 
-During my time in the Apple Developer Academy, I was tasked with taking an existing app or website and redesigning it. I decided to take on this challenge and redesigned an existing app that I thought was poorly designed. 
+During my time in the Apple Developer Academy, I was tasked with taking an existing app or website and redesigning it. I decided to take on this challenge and redesigned an existing app that I thought had terrible UI/UX. 
 
 I added features such as: 
 
