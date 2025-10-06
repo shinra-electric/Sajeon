@@ -14,6 +14,6 @@ I added features such as:
 - Exact matches and similar matches
 - Favourites
 
-As it was a redesign of an existing app, there are buttons for features that don't exist in this app, but did in that one. Therefore I intend on redesigning it again to just focus on the primary features, and add English->Korean search functionality and notes. 
+I intend on redesigning it again to focus on the primary features, use my own colour scheme, notes, and most importantly add English -> Korean search functionality. 
 
 Dictionary data is from [cc-kedict](https://github.com/mhagiwara/cc-kedict)
