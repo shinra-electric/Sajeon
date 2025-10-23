@@ -8,21 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection: Int = 0
 
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
+            Tab("Search", systemImage: "magnifyingglass", value: 0) {
+                SearchView()
+            }
 
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-
-            FavouritesView()
-                .tabItem {
-                    Label("Favourites", systemImage: "star.fill")
-                }
+            Tab("Favourites", systemImage: "star.fill", value: 1) {
+                FavouritesView()
+            }
         }
-        .backgroundStyle(.ultraThinMaterial)
     }
 }
 

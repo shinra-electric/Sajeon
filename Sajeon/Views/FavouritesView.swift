@@ -15,7 +15,7 @@ struct FavouritesView: View {
         NavigationStack {
             ZStack {
                 Color("naverblue")
-                    .ignoresSafeArea(.container, edges: .top)
+                    .ignoresSafeArea(.container, edges: .vertical)
 
                 VStack(alignment: .leading, spacing: 0) {
                     BannerView()
