@@ -10,8 +10,17 @@ import DequeModule
 
 class ViewModel: ObservableObject {
     let dictionary = Bundle.main.decode([Entry].self, from: "kedict.json")
-    @Published var favourites = Set<Entry>()
-    @Published var recents = Deque<Entry>()
+    
+    @Published var favourites = Set<Entry>() {
+        didSet {
+            saveFavourites()
+        }
+    }
+    @Published var recents = Deque<Entry>() {
+        didSet {
+            saveRecents()
+        }
+    }
     
     @Published var showFavoritesOnly = false
     
@@ -25,8 +34,58 @@ class ViewModel: ObservableObject {
     ]
     
     let numberOfRecentViews = 6
+    
+    // UserDefaults keys
+    private let favouritesKey = "favourites"
+    private let recentsKey = "recents"
+    
+    init() {
+        loadFavourites()
+        loadRecents()
+    }
+    
+    // MARK: - Favourites Persistence
+    private func saveFavourites() {
+        do {
+            let data = try JSONEncoder().encode(Array(favourites))
+            UserDefaults.standard.set(data, forKey: favouritesKey)
+        } catch {
+            print("Failed to save favourites: \(error)")
+        }
+    }
+    
+    private func loadFavourites() {
+        guard let data = UserDefaults.standard.data(forKey: favouritesKey) else { return }
+        do {
+            let decoded = try JSONDecoder().decode([Entry].self, from: data)
+            favourites = Set(decoded)
+        } catch {
+            print("Failed to load favourites: \(error)")
+        }
+    }
+    
+    // MARK: - Recents Persistence
+    private func saveRecents() {
+        do {
+            let data = try JSONEncoder().encode(Array(recents))
+            UserDefaults.standard.set(data, forKey: recentsKey)
+        } catch {
+            print("Failed to save recents: \(error)")
+        }
+    }
+    
+    private func loadRecents() {
+        guard let data = UserDefaults.standard.data(forKey: recentsKey) else { return }
+        do {
+            let decoded = try JSONDecoder().decode([Entry].self, from: data)
+            recents = Deque(decoded)
+        } catch {
+            print("Failed to load recents: \(error)")
+        }
+    }
+    
     func addToRecents(word: Entry) {
-        if !recents.contains(word) ? true : false {
+        if !recents.contains(word) {
             if recents.count < numberOfRecentViews {
                 recents.prepend(word)
             } else {
@@ -34,10 +93,10 @@ class ViewModel: ObservableObject {
                 recents.prepend(word)
             }
         } else {
-//            print("Word not added to deque. Duplicate. ")
+            // print("Word not added to deque. Duplicate. ")
         }
+        // saveRecents() is automatically called by didSet on recents
     }
-    
 
     func toggle(favourite word: Entry) {
         if favourites.contains(word) {
@@ -45,11 +104,11 @@ class ViewModel: ObservableObject {
         } else {
             favourites.insert(word)
         }
+        // saveFavourites() is automatically called by didSet
     }
     
     func isContainedInDictionary(word searchTerm: String) -> Bool {
         let hangulFilter = dictionary.filter { $0.word.contains(searchTerm) }
-        
         return hangulFilter.isEmpty ? false : true
     }
     
@@ -67,9 +126,6 @@ class ViewModel: ObservableObject {
         
         return definitionsList
     }
-    
-    
-    
     
     func getPOS(pos: String) -> String {
         switch(pos) {
