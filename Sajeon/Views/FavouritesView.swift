@@ -14,7 +14,7 @@ struct FavouritesView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color("naverblue")
+                Color(.sajeonBlue)
                     .ignoresSafeArea(.container, edges: .vertical)
 
                 VStack(alignment: .leading, spacing: 0) {
@@ -56,7 +56,7 @@ struct FavouritesView: View {
                                             Label("Add Favourite", systemImage: "star")
                                         }
                                     }
-                                    .tint(Color("naverblue"))
+                                    .tint(.sajeonBlue)
                                 }
                             }
                             
