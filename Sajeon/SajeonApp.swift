@@ -12,7 +12,10 @@ struct Handict3App: App {
     @StateObject var viewModel = ViewModel()
 
     var body: some Scene {
-        WindowGroup {
+        
+        LaunchScreen(config: .init(scaling: 12)) {
+            Image(.launchScreenLogo)
+        } rootContent: {
             ContentView()
                 .environmentObject(viewModel)
         }

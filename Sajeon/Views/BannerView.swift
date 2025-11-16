@@ -40,7 +40,7 @@ struct BannerView: View {
 //                .fontWeight(.bold)
 //                .offset(x: -4, y: -8)
                 
-                Image("dictpic")
+                Image(.launchScreenLogo)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 80)

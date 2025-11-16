@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2480942EC9F2BE006CC280 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2480932EC9F2BE006CC280 /* LaunchScreen.swift */; };
 		4C2B0C7F2B7BAB2600CB8ACD /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B0C772B7BAB2600CB8ACD /* FavouritesView.swift */; };
 		4C2B0C802B7BAB2600CB8ACD /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B0C782B7BAB2600CB8ACD /* EntryView.swift */; };
 		4C2B0C812B7BAB2600CB8ACD /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B0C792B7BAB2600CB8ACD /* SearchbarView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2480932EC9F2BE006CC280 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		4C2B0C772B7BAB2600CB8ACD /* FavouritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		4C2B0C782B7BAB2600CB8ACD /* EntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		4C2B0C792B7BAB2600CB8ACD /* SearchbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2B0C902B7BAB8E00CB8ACD /* Helper.swift */,
+				4C2480932EC9F2BE006CC280 /* LaunchScreen.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2480942EC9F2BE006CC280 /* LaunchScreen.swift in Sources */,
 				4C2B0C8A2B7BAB3800CB8ACD /* Entry.swift in Sources */,
 				4C2B0C862B7BAB2600CB8ACD /* FeatureButton.swift in Sources */,
 				4C2B0C832B7BAB2600CB8ACD /* BannerView.swift in Sources */,
