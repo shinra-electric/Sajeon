@@ -66,7 +66,7 @@ struct EntryView: View {
             .listStyle(InsetGroupedListStyle())
         }
         .scrollContentBackground(.hidden)
-        .background(Color("naverblue"), ignoresSafeAreaEdges: .top)
+        .background(.sajeonBlue, ignoresSafeAreaEdges: .top)
     }
 }
 

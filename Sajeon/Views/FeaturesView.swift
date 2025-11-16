@@ -15,10 +15,7 @@ struct FeaturesView: View {
     ]
     
     var body: some View {
-        ZStack {
-//            Color("naverblue")
-//                .ignoresSafeArea(.all)
-            
+        ZStack {            
              LazyVGrid(columns: columns, spacing: 20) {
                  ForEach(viewModel.availableFeatures, id: \.self) { item in
                      item

@@ -24,7 +24,7 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color("naverblue")
+                Color(.sajeonBlue)
                     .ignoresSafeArea(.container, edges: .vertical)
                 
                 VStack(spacing: 0) {
@@ -78,7 +78,7 @@ struct RecentsView: View {
                                     Label("Add Favourite", systemImage: "star")
                                 }
                             }
-                            .tint(Color("naverblue"))
+                            .tint(.sajeonBlue)
                         }
                 }
             }
@@ -108,7 +108,7 @@ struct DictionarySearchView: View {
                                     Label("Add Favourite", systemImage: "star")
                                 }
                             }
-                            .tint(Color("naverblue"))
+                            .tint(.sajeonBlue)
                         }
                 }
             }
@@ -131,7 +131,7 @@ struct DictionarySearchView: View {
                                     Label("Add Favourite", systemImage: "star")
                                 }
                             }
-                            .tint(Color("naverblue"))
+                            .tint(.sajeonBlue)
                         }
                 }
             }
