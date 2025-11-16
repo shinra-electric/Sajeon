@@ -18,7 +18,7 @@ I added features such as:
 Before I can post it to the App Store, I intend on redesigning it again with these points in mind: 
 
 - Change the UI to focus on the primary features
-- Add persistance
+- ~~Add persistence~~
 - Add English -> Korean search functionality
 - Add notes
 
